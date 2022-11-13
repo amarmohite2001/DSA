@@ -6,7 +6,7 @@ def hasVowels(strArray, queries):
     result = []
     # traverse query by query
     for query in queries:
-        # split the query and get l and r values
+        
         values = query.split("-")
         l = int(values[0])
         r = int(values[1])
