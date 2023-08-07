@@ -6,10 +6,11 @@ class Solution:
         count = len(p)
         served = 0
         while count>0 and served<count:
-            if p and q and p[0]==q[0]:
+            if p[0]==q[0]:
                 p.popleft()
                 q.popleft()
                 served=0
+                count-=1
             else:
                 if not p or not q:
                     break
