@@ -7,12 +7,10 @@ class Solution:
         F1=0
         F2=1
         i=2
-        last=0
         while i<=n:
             temp=F1+F2
             F1=F2
             F2=temp
-            # last=temp
             i+=1
         return temp
             
