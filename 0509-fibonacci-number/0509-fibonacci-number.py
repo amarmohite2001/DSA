@@ -12,9 +12,9 @@ class Solution:
             temp=F1+F2
             F1=F2
             F2=temp
-            last=temp
+            # last=temp
             i+=1
-        return last
+        return temp
             
         
     
