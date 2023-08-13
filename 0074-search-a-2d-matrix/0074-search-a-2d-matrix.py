@@ -10,8 +10,8 @@ class Solution:
                 top = mid+1
             else:
                 break
-        # if not top<=bot:
-        #     return False
+        if not top<=bot:
+            return False
         
         # mid = (top+bot)//2
         l,r= 0, COLS-1
