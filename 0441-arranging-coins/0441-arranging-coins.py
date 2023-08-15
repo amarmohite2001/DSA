@@ -1,15 +1,16 @@
 class Solution:
     def arrangeCoins(self, n: int) -> int:
-        res=n
-        a=0
-        if n == 1:
-            return 1
-        for i in range(1,n+1):
-            if res>=i:
-                res -= i
-                a+=1
-            else:
-                return a 
+        # res=n
+        # a=0
+        # if n == 1:
+        #     return 1
+        # for i in range(1,n+1):
+        #     if res>=i:
+        #         res -= i
+        #         a+=1
+        #     else:
+        #         return a 
+        return int(sqrt(2 * n + 0.25) - 0.50)
         
             
             
