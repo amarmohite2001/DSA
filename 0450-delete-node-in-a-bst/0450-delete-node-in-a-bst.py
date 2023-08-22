@@ -12,19 +12,21 @@ class Solution:
         if key > root.val:
             root.right = self.deleteNode(root.right, key)
         elif key < root.val:
-            root.left = self.deleteNode(root.left, key)
-        else:
-            if not root.left:
-                return root.right
-            elif not root.right:
-                return root.left
+            root.left = self.deleteNode(root.left,key)
             
-            # Find the min from right subtree
-            cur = root.right
-            while cur.left:
-                cur = cur.left 
-            root.val = cur.val
-            root.right = self.deleteNode(root.right, root.val)
+        else:
+            if not root.left and not root.right:
+                root = None
+            elif not root.left:
+                root = root.right
+            elif not root.right:
+                root= root.left
+            else:
+                curr = root.right
+                while curr.left:
+                    curr = curr.left
+                root.val = curr.val
+                root.right = self.deleteNode(root.right, root.val)       
         return root
             
                 
