@@ -5,11 +5,15 @@ class Solution:
         res, prev = 1, ""
         while r<len(arr):
             if arr[r-1]>arr[r] and prev !=1:
-                res = max(res, r-l+1)
+                if res<(r-l+1):
+                    res = r-l+1
+                # res = max(res, r-l+1)
                 r+=1
                 prev=1
             elif arr[r-1]<arr[r] and prev != -1:
-                res = max(res, r-l+1)
+                if res<(r-l+1):
+                    res = r-l+1
+                # res = max(res, r-l+1)
                 r+=1
                 prev=-1
             else:
