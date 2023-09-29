@@ -6,6 +6,9 @@ class Solution:
             if curSum<0:
                 curSum=0
             curSum+=i
-            maxSum = max(maxSum, curSum)
+            if maxSum<curSum:
+                maxSum=curSum
+                
+            # maxSum = max(maxSum, curSum)
         return maxSum
         
